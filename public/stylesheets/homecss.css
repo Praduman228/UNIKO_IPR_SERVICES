@@ -962,44 +962,6 @@ section.t-bq-section {
 
 }
 
-#data{
-  width: 100%;
-  background-color: #DBD3CD; 
-  padding: 3%;
-}
-
-
-#dets
-{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-top: 3%;
-  padding-bottom: 1%;
-}
-@media screen and (max-width:1024px) {
- #dets{
-  flex-wrap: wrap;
-  flex-direction: column;
- } 
-}
-.det{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-.det h3{
-  font-size: 100px;
-  font-weight: 200;
-}
-
-.det h4{
-  font-size: 70px;
-  font-weight: 200;
-}
 
 #myteam{
   width: 100%;
