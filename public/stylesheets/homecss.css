@@ -636,7 +636,7 @@ body{
 
 
 #blog{
-  width: 100%;
+  width: 100% !important;
   background-color: #97dcc4;
   padding-top: 2%;
  
@@ -649,15 +649,10 @@ body{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   padding-bottom: 3%;
-  padding-left: 8%;
-  padding-right: 8%;
+ justify-content: center;
 }
-blockquote {
-  padding: 0;
-  margin: 0;
-}
+
 
 section.t-bq-section {
   padding: 10px;
@@ -668,16 +663,6 @@ section.t-bq-section {
   max-width: 576px;
   margin: 0 auto;
 }
-
-.t-bq-wrapper.t-bq-wrapper-fullwidth {
-  max-width: 100%;
-}
-
-
-
-
-
-
 
 .t-bq-quote-paul {
   position: relative;
@@ -800,7 +785,7 @@ section.t-bq-section {
   flex-wrap: nowrap;
   height: 80px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content:center;
   background: url("https://raw.githubusercontent.com/taviskaron/t-div-blockquotes/main/img/hexabump.png") repeat;
   border-radius: 10px 10px 0 0;
 }
@@ -866,7 +851,7 @@ section.t-bq-section {
   font-size: 9pt;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
 
   .t-bq-quote-jasper .t-bq-quote-jasper-base {
       padding-left: 30px;
@@ -943,7 +928,7 @@ section.t-bq-section {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
 
   .t-bq-quote-horace .t-bq-quote-horace-base {
       padding-left: 40px;
