@@ -21,14 +21,7 @@ router.post('/contact', async function(req, res) {
  try{ const newcontact = await contactmodel.create({
     name:req.body.name,
     email:req.body.email,
-    conutry:req.body.conutry,
-    phone:req.body.phone,
-    company:req.body.Company,
     mobile:req.body.Mobile,
-    city:req.body.city,
-    state:req.body.state,
-    postalCode:req.body.postalcode,
-    subject:req.body.subject,
     message:req.body.message 
   })
   await newcontact.save()
@@ -37,6 +30,7 @@ router.post('/contact', async function(req, res) {
   var name = req.body.name;
   var email = req.body.email;
   var message = req.body.message;
+  var mobile = req.body.Mobile;
   
   
   const transporter = nodemail.createTransport({
@@ -58,7 +52,7 @@ router.post('/contact', async function(req, res) {
     from: `${process.env.CLIENT_MAIL}`,
     to: `${process.env.CLIENT_MAIL}`,
     subject: 'User Details',
-    text: `User Name :- ${name},\n\n User Email:- ${email}.\n\n  User Message:- ${message}\nUNIKO IPR Services`
+    text: `User Name :- ${name},\n\n User Email:- ${email}.\n\n Mobile No:-${mobile} \n\n  User Message:- ${message}\n\n UNIKO IPR Services`
    
   };
   await transporter.sendMail(mailOptions);
