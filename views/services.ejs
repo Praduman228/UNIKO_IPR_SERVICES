@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Services">
+    <meta name="author" content="someone">
+
+    <title> UNIKO IPR SERVICES</title>
+    <link rel="icon" type="image/x-icon" href="../images/loho.png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../stylesheets/services.css">
+    <link rel="stylesheet" href="css/styleblog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+
+</head>
+
+    <div class="hero">
+      <nav>
+        <div class="hh">
+          <div class="logo"><img src="../images/loho.png" alt="logo"></div>
+          <div class="hambargar">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <ul>
+          <li><a href="/" style="font-weight: bolder;">Home</a></li>
+          <li><a href="/services" style="background-color: #97dcc4; font-weight: bolder;">Services</a></li>
+          <li><a href="/#aboutus" style="font-weight: bolder;">About Us</a></li>
+          <li><a href="/#contactus"style="font-weight: bolder;">Contact Us</a></li>
+          <i class="fa-solid fa-user profileIcon"></i>
+        </ul>
+        <div class="sub-menu-wrap" id="profileMenu">
+         <% if (req.isAuthenticated()){%>
+          <div class="sub-menu">
+            <div class="user-info">
+             <img  src="https://www.happierhuman.com/wp-content/uploads/2019/07/joking-man.jpg?ezimgfmt=rs:400x426/rscb1" alt="">
+              <h3><%=user.name %></h3>        
+              </div>
+            <hr>
+            <div class="menu-link">
+              <a href="#"><i class="fa-solid fa-user"></i>
+                <h4> Edit Profile <span>&gt;</span></h4>
+              </a>
+              <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i>
+                <h4> LogOut <span>&gt;</span></h4>
+              </a>
+            </div>
+          </div>
+        <%}else {%>
+          <div class="sub-menu">
+            <div class="user-info">
+             <img  src="https://www.happierhuman.com/wp-content/uploads/2019/07/joking-man.jpg?ezimgfmt=rs:400x426/rscb1" alt="">
+              <h3>Wellcome Guest</h3>      
+            </div>
+            <hr>
+            <div class="menu-link">
+              <a href="/login"><i class="fa-solid fa-right-to-bracket"></i>
+                <h4> LogIn <span>&gt;</span></h4>
+              </a>
+              <a href="/login"><i class="fa-solid fa-right-from-bracket"></i>
+                <h4> SignUp <span>&gt;</span></h4>
+              </a>
+            </div>
+          </div>
+          <% }%>
+        </div>
+      </nav>
+    </div>
+
+<section class="bg-section" id="service">
+		<div class="section-h1">
+			<h1>Services</h1>
+			<hr class="hr-h1">
+		</div>
+        <div class="container-fluid">
+        	<div class="row slideanim slide"> 
+	        <div class="tabpanel" role="tabpanel">
+	            <div class="col-md-3 col-sm-3">
+	                <ul class="nav nav-pills brand-pills nav-stacked" role="tablist">
+	                    <li role="presentation" class="brand-nav active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab" aria-expanded="true">PATENT</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab" aria-expanded="false">TRADEMARK</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab" aria-expanded="false">COPYRIGHT</a></li>
+	                    <li role="presentation" class="brand-nav "><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab" aria-expanded="false">DESIGN</a></li>
+	                </ul>
+	            </div>
+	            <div class="col-md-9 col-sm-9">
+	                <div class="tab-content">
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft active" id="tab1">
+	                    	<h3 class="laws">PATENT</h3>
+	                    	<hr class="laws-hr">
+	                        <p>A patent is an exclusive right granted by the Government to the inventor to exclude others to use, make and sell an invention is a specific period of time. We can apply for patent for improvement in previous Invention. 
+                                In modern terms, the patent is usually referred to as the right granted to an inventor for his Invention of any new, useful, non-obvious process, machine, article of manufacture, or composition of matter. The word “patent” is referred from a Latin term “patere” which means “to lay open,” i.e. to make available for public inspection. 
+                                There are three basic tests for any invention to be patentable:</p>
+                                <ol>
+                                <li> Absolute novelty – the invention should be new and not disclosed to the public anywhere in the world in any form or through any medium. </li>	 
+                                <li> Inventive step/non-obviousness – the invention should not be obvious to a person skilled in the art in the relevant area of technology and should involve an inventive feature which is distinctive in nature from the previous inventions made in the same field. </li> 
+                                <li>Industrial application – the new product or process should be capable of being made or used in an industry and it should have economic significance.</li> 
+                                </ol>
+                                <p>
+                                An invention considered as new if, on the date of filing the application, any such invention is not known to the public in any form, i.e. oral, writing, or any other form. The patent has a limited term of 20 years, which is counted from the date of filing of the patent application. A patent is a territorial right. Thus, it can only be applied in the country where it has been granted. Therefore, any legal action against infringement or infringement of patent rights can only be taken in that country. To obtain patent protection in different countries, each country must apply for a patent. 
+                                The Patent Cooperation Treaty (PCT) provides a way to file an international patent application in which a patent can be filed through a single patent application in a large number of countries. 
+                                </p>
+	                    </div>
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft" id="tab2">
+	                    	<h3 class="laws">TRADEMARK</h3>
+	                    	<hr class="laws-hr">
+	                        <p>A trademark is a distinctive sign or indicator used by an individual, business organization, or other legal entity to identify that the products or services to consumers with which the trademark appears originate from a unique source, and to distinguish its products or services from those of other entities.
+                                A trademark is typically a name, word, phrase, logo, symbol, design, image, or a combination of these elements. There is also a range of non-conventional trademarks comprising marks which do not fall into these standard categories, such as those based on color, smell, or sound.
+                                The essential function of a trademark is to exclusively identify the commercial source or origin of products or services, such that a trademark, properly called, indicates source or serves as a badge of origin. Trademarks not only identify goods, but create a distinction between goods from various sources.
+                                </p>
+	                </div>
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft" id="tab3">
+	                    	<h3 class="laws">COPYRIGHT</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+                                Copyright law deals with the protection and exploitation of the expression of ideas in a tangible form. Copyright has evolved over many centuries with respect to changing ideas about creativity and new means of communication and media. In the modern world, the law of copyright provides not only a legal framework for the protection of the traditional beneficiaries of copyright, the individual writer, composer or artist, but also the publication required for the creation of work by major cultural industries, film; Broadcast and recording industry; And computer and software industries.
+                                It resides in literary, dramatic, musical and artistic works in ‘original’ cinematic films, and in sound recordings set in a concrete medium. To be protected as the copyright, the idea must be expressed in original form. Copyright acknowledges both the economic and moral rights of the owner. The right to copyright is, by the principle of fair use, a privilege for others, without the copyright owner’s permission to use copyrighted material. By the application of the doctrine of fair use, the law of copyright balances private and public interests.
+                                
+	                        </p>
+	                    </div>
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft " id="tab4">
+	                    	<h3 class="laws">DESIGN</h3>
+	                    	<hr class="laws-hr">
+                            <p>Design is one of the forms of IPR that protects the visual design of the object which is not purely utilized. It consists of the creation of features of shape, configuration, pattern, ornamentation or composition of lines or colours applied to any article in two or three-dimensional form or combination of one or more features. 
+                                Design protection deals with the outer appearance of an article, including decoration, lines, colours, shape, texture and materials. It may consist of three-dimensional features such as colours, shapes and shape of an article or two-dimensional features such as shapes or surface textures or other combinations.
+                                </p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        </div>
+	    </div>    
+		
+	</section>
+
+    <section class="bg-section" id="service">
+	
+        <div class="container-fluid">
+        	<div class="row slideanim slide"> 
+	        <div class="tabpanel" role="tabpanel">
+	            <div class="col-md-3 col-sm-3">
+	                <ul class="nav nav-pills brand-pills nav-stacked" role="tablist">
+	                    <li role="presentation" class="brand-nav active"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab" aria-expanded="true">LTITGATION</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab6" aria-controls="tab6" role="tab" data-toggle="tab" aria-expanded="false">GEO-INDECATION</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab7" aria-controls="tab7" role="tab" data-toggle="tab" aria-expanded="false">PLANT VARIETIES</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab8" aria-controls="tab8" role="tab" data-toggle="tab" aria-expanded="false">CORPORATE LAW</a></li>
+	                </ul>
+	            </div>
+	            <div class="col-md-9 col-sm-9">
+	                <div class="tab-content">
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft" id="tab6">
+	                    	<h3 class="laws">GEO-INDECATION</h3>
+	                    	<hr class="laws-hr">
+	                      <p>
+                            Geographical Indication is a name or sign used on certain products which corresponds to a geographic location or origin of the product, the use of geographical location may act as a certification that the product possesses certain qualities as per the traditional method. Darjeeling tea and basmati rice are a common example of geographical indication. The relationship between objects and place becomes so well known that any reference to that place is reminiscent of goods originating there and vice versa.
+It performs three functions. First, they identify the goods as origin of a particular region or that region or locality; Secondly, they suggest to consumers that goods come from a region where a given quality, reputation, or other characteristics of the goods are essentially attributed to their geographic origin, and third, they promote the goods of producers of a particular region. They suggest the consumer that the goods come from this area where a given quality, reputation or other characteristics of goods are essentially attributable to the geographic region.
+It is necessary that the product obtains its qualities and reputation from that place. Since those properties depend on the geographic location of production, a specific link exists between the products and the place of origin. Geographical Indications are protected under the Geographical Indication of Goods (Registration and Protection) Act, 1999.
+
+                          </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane slideanimleft slideleft" id="tab7">
+	                    	<h3 class="laws">PLANT VARIETIES</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+                                Plant varieties refer to distinct and uniform groups of plants within a species that possess specific characteristics or traits, such as color, size, shape, or resistance to pests and diseases. These varieties are often developed through selective breeding and genetic modification to enhance desirable traits and improve agricultural productivity. The protection and registration of new plant varieties are governed by plant variety protection laws, which grant breeders exclusive rights to their new varieties, encouraging innovation and ensuring a diverse and resilient agricultural landscape
+	                        </p>
+	                        
+	                    </div>
+	                    
+	                        
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft" id="tab8">
+	                    	<h3 class="laws">CORPORATE LAW</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+                                Corporate laws are a set of legal guidelines that govern the formation, operation, and dissolution of corporations. They encompass a wide range of issues including corporate governance, director and officer responsibilities, mergers and acquisitions, shareholder rights, and compliance with state and federal regulations. These laws ensure that corporations operate in a fair and transparent manner, protecting the interests of shareholders, employees, and the public. Adhering to corporate laws is essential for maintaining corporate integrity and avoiding legal penalties
+ 
+	                        </p>
+	                       
+	                    </div>
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft active" id="tab5">
+	                    	<h3 class="laws">LTITGATION</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+                                Litigation is the process of resolving disputes and conflicts through the court system. It involves a series of steps, including filing a lawsuit, discovery, pre-trial motions, trial, and potentially appeals. Litigation can be used to settle a wide range of disputes, from commercial and corporate conflicts to personal injury and family law cases. The litigation process is governed by procedural rules and requires the presentation of evidence and legal arguments to a judge or jury. While litigation can be a lengthy and costly process, it is a crucial mechanism for upholding legal rights and ensuring justice
+	                        </p>
+	                        
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        </div>
+	    </div>    
+		
+	</section>
+
+
+<script src="js/script.js"></script>
+
+
+<script>
+    angular.module('formApp', [])
+        .controller('formController', ['$scope', function($scope) {
+          	$scope.master = {};
+
+          	$scope.update = function(user) {
+            	$scope.master = angular.copy(user);
+          	};
+
+          	$scope.reset = function() {
+            	$scope.user = angular.copy($scope.master);
+          	};
+
+          	$scope.reset();
+    }]);
+
+    const menu = document.getElementById("profileMenu");
+    const menuBtn =  document.querySelector(".profileIcon");
+
+    menuBtn.addEventListener("click",function(){
+        menu.classList.toggle("show");
+        setTimeout(() => {
+            menu.style.overflow = "visible";
+        }, 300);
+        menu.style.overflow = "hidden";
+    })
+    
+    document.addEventListener("click",function(e){
+        if(e.target !== menuBtn && !menu.contains(e.target)){
+            menu.classList.remove("show");
+        }
+    })
+    // profile panel
+
+    // hambargar
+    const hmb = document.querySelector(".hambargar");
+    const navul = document.querySelector(".hero nav ul");
+
+    var x = window.matchMedia("(max-width: 700px)");
+
+    x.addEventListener("change", function() {
+        navul.classList.remove("show");
+        menu.classList.remove("show");
+        hmb.classList.remove("active");
+    });
+    hmb.addEventListener("click",function(){
+        navul.classList.toggle("show");
+        hmb.classList.toggle("active");
+    })
+
+    document.addEventListener("click",function(e){
+        if(e.target !== hmb && !navul.contains(e.target)){
+            navul.classList.remove("show");
+            hmb.classList.remove("active");
+        }
+    })
+</script> 
+
+</body>
+</html>	
+

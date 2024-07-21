@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIKO IPR SERVICES</title>
+</head>
+<link rel="icon" type="image/x-icon" href="../images/loho.png">
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/homecss.css">
+<body>
+  <div id="main">
+<div class="hero">
+  <nav>
+    <div class="hh">
+      <div class="logo"><img src="../images/loho.png" alt="logo"></div>
+      <div class="hambargar">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <ul>
+      <li><a href="#main" style="background-color: #97dcc4;">Home</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="#aboutus">About Us</a></li>
+      <li><a href="#contactus">Contact Us</a></li>
+      <i class="fa-solid fa-user profileIcon"></i>
+    </ul>
+    <div class="sub-menu-wrap" id="profileMenu">
+     <% if (req.isAuthenticated()){%>
+      <div class="sub-menu">
+        <div class="user-info">
+         <img  src="https://www.happierhuman.com/wp-content/uploads/2019/07/joking-man.jpg?ezimgfmt=rs:400x426/rscb1" alt="">
+          <h3><%=user.name %></h3>        
+          </div>
+        <hr>
+        <div class="menu-link">
+          <a href="#"><i class="fa-solid fa-user"></i>
+            <h4> Edit Profile <span>&gt;</span></h4>
+          </a>
+          <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i>
+            <h4> LogOut <span>&gt;</span></h4>
+          </a>
+        </div>
+      </div>
+    <%}else {%>
+      <div class="sub-menu">
+        <div class="user-info">
+         <img  src="https://www.happierhuman.com/wp-content/uploads/2019/07/joking-man.jpg?ezimgfmt=rs:400x426/rscb1" alt="">
+          <h3>Wellcome Guest</h3>      
+        </div>
+        <hr>
+        <div class="menu-link">
+          <a href="/login"><i class="fa-solid fa-right-to-bracket"></i>
+            <h4> LogIn <span>&gt;</span></h4>
+          </a>
+          <a href="/login"><i class="fa-solid fa-right-from-bracket"></i>
+            <h4> SignUp <span>&gt;</span></h4>
+          </a>
+        </div>
+      </div>
+      <% }%>
+    </div>
+  </nav>
+</div>
+<main>
+  <div class="slider">
+    <div class="item">
+      <img src="../images/image_banner1.jpg" loading="eager" alt="">
+      <div class='content'>
+        <h2 class='title'>Protecting Your Brilliance</h2>
+        <p class='description'> Your Trusted Technolegal Guardian
+          Innovate with confidence
+           </p>
+        <button>Read More</button>
+      </div>
+    </div>
+    <!-- visibele item -->
+    <div class="item">
+      <img src="../images/right-4926156_1920.jpg" loading="eager" alt="Nobis Omnis" class="image" />
+      <div class='content'>
+        <h2 class='title'>Protecting Your Brilliance</h2>
+        <p class='description'> Your Trusted Technolegal Guardian
+          Innovate with confidence
+           </p>
+        <button>Read More</button>
+      </div>
+    </div>
+    <div class="item">
+      <img src="../images/image_banner2.jpg" loading="eager" alt="Ut Distinctio" class="image" />
+      <div class='content'>
+        <h2 class='title'>Copyright</h2>
+        <p class='description'>Copyright law deals with the protection and exploitation of the expression of ideas in a tangible form. 
+           </p>
+        <button>Read More</button>
+      </div>
+    </div>
+    <div class='item'>
+      <img src="https://cdn.pixabay.com/photo/2017/11/05/22/44/property-2922160_1280.jpg" loading="eager" alt="Commodi Veniam" class="image" />
+      <div class='content'>
+        <h2 class='title'>"Last Trace Of Us"</h2>
+        <p class='description'>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+        </p>
+        <button>Read More</button>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://cdn.pixabay.com/photo/2019/10/02/14/23/house-keys-4521073_1280.jpg" loading="eager" alt="Ipsam Tenetur" class="image" />
+      <div class='content'>
+        <h2 class='title'>"Urban Decay"</h2>
+        <p class='description'>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+        </p>
+        <button>Read More</button>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://cdn.pixabay.com/photo/2019/12/18/13/05/right-4703926_1280.jpg" loading="eager" alt="Nesciunt Consectetur Similique Sit" class="image" />
+      <div class='content'>
+        <h2 class='title'>"The Migration"</h2>
+        <p class='description'> Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+          praesentium nisi. Id laboriosam ipsam enim. </p>
+        <button>Read More</button>
+      </div>
+    </div>
+  </div>
+  <div id='nav'>
+    <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+    <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+  </div>
+</main>
+</div>
+<div id="services">
+  <section class="container">
+    <h2>Our Sevices</h2>
+    <div class="row">
+      <div class="service">
+        <img src="https://www.parkerip.com/wp-content/uploads/2020/09/patent-icon.svg" alt="" srcset="">
+        <h3>PATENT</h3>
+        <p>A patent is an exclusive right granted by the Government to the inventor to exclude others to use, make and sell an invention is a specific period of time</p>
+      </div>
+      <div class="service">
+        <img src="https://www.parkerip.com/wp-content/uploads/2020/09/trademark-icon.svg" alt="">
+        <h3>TRADEMARK</h3>
+        <p>A trademark is a legally registered sign, design, or expression that identifies and distinguishes the source of products or services of one entity from those of others.</p>
+      </div>
+      <div class="service">
+       <img src="https://www.parkerip.com/wp-content/uploads/2020/09/copyright-icon.svg" alt="">
+        <h3>COPYRIGHT</h3>
+        <p>Copyright law deals with the protection and exploitation of the expression of ideas in a tangible form. </p>
+      </div>
+      <div class="service">
+        <img src="https://www.parkerip.com/wp-content/uploads/2020/09/design-icon.svg" alt="">
+        <h3>DESIGN</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="service">
+        <img src="https://www.parkerip.com/wp-content/uploads/2020/09/geo-indication-icon.svg" alt="">
+        <h3>GEO-INDECATION</h3>
+        <p>short 
+          ChatGPT
+          A geographical indication (GI) is a sign used on products that have a specific geographical origin and possess qualities or reputation due to that origin.</p>
+      </div>
+      <div class="service">
+        <img src="https://www.parkerip.com/wp-content/uploads/2020/09/plant-varieties.svg" alt="">
+        <h3>PLANT VARIETIES</h3>
+        <p>Plant variety protection (PVP) grants breeders exclusive rights to new, distinct, uniform, and stable plant varieties.</p>
+      </div>
+      <div class="service">
+        <img src="https://www.parkerip.com/wp-content/uploads/2020/09/corporate-low-icon.svg" alt="">
+        <h3>CORPORATE LAW</h3>
+        <p>
+          Corporate law governs the formation, operation, and regulation of corporations, focusing on legal rights, duties, and obligations of shareholders, directors, and officers.</p>
+      </div>
+      <div class="service">
+        <img src="https://www.parkerip.com/wp-content/uploads/2020/09/litigation-icon.svg" alt="">
+        <h3>LTITGATION</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+  </section>
+</div>
+<div id="aboutus">
+  <div id="left">
+    <img
+      src="https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_1280.jpg"
+      alt=""
+      srcset=""
+    />
+  </div>
+  <div id="right">
+    <h2>about us</h2>
+    <h4>
+      UNIKO IPR is an Intellectual Property service provider that helps our clients for filing and processing of Patent, Copyright, Trademark and Industrial Design.We are specialized Technology and Research consulting organization that helps scientists, researchers and innovators to protect their innovation and research.We have a vibrant and healthy blend of Technical and Legal expert professionals that furnish us to promote our clients in creating and protecting their intelligence to the best value.
+
+    </h4>
+  </div>
+  
+</div>
+<div id="myteam">
+  <h2>Our Teams</h2>
+  <div id="teams">
+    <div class="team">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHx8MA%3D%3D" alt="">
+      <h3>Mr. Ankit</h3>
+      <h4>(founder & CEO)</h4>
+      <h4>Registered Patent Attorney</h4>
+      <h4>(Reg.No. IN/PA5865)</h4>
+      
+    </div>
+    <div class="team">
+      <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      <h3>Mrs Ashvini</h3>
+      <h4>(Director & CTO)</h4>
+      <h4>Intellectual Property Consultant<br>& IPR Facilator</h4>
+      
+    </div>
+    </div>
+  
+</div>
+
+
+<div id="blog">
+  <h2>Reviews</h2>
+  <div id="blogs">
+<section class="t-bq-section" id="paul">
+  <div class="t-bq-wrapper t-bq-wrapper-boxed">
+      <div class="t-bq-quote t-bq-quote-paul">
+          <div class="t-bq-quote-paul-userpic"></div>
+          
+          <div class="t-bq-quote-paul-pattern">
+          </div>
+          <div class="t-bq-quote-paul-base">
+              <blockquote class="t-bq-quote-paul-text" cite="Strugatsky Brothers">
+                UNIKO IPR Services is an absolute game-changer when it comes to safeguarding intellectual property rights. As a satisfied customer, I can confidently say that their expertise and dedication are unmatched in the industry. From the moment I engaged with their team, I was impressed by their professionalism and attention to detail.
+              </blockquote>
+              <div class="t-bq-quote-paul-meta">
+                  <div class="t-bq-quote-paul-meta-info">
+                      <div class="t-bq-quote-paul-author"><cite>Swapnil Ambule</cite></div>
+                      
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="t-bq-section" id="paul">
+  <div class="t-bq-wrapper t-bq-wrapper-boxed">
+      <div class="t-bq-quote t-bq-quote-paul">
+          <div class="t-bq-quote-paul-userpic"></div>
+          
+          <div class="t-bq-quote-paul-pattern">
+          </div>
+          <div class="t-bq-quote-paul-base">
+              <blockquote class="t-bq-quote-paul-text" cite="Strugatsky Brothers">
+                Thanks to UNIKO IPR Services, I can rest easy knowing that my intellectual property rights are in the best hands possible. I highly recommend them to anyone in need of reliable and trustworthy intellectual property services. With UNIKO IPR Services, your intellectual property is not just protected – it's empowered for success."
+              </blockquote>
+              <div class="t-bq-quote-paul-meta">
+                  <div class="t-bq-quote-paul-meta-info">
+                      <div class="t-bq-quote-paul-author"><cite>Kaustabh Deokate</cite></div>
+                    
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="t-bq-section" id="paul">
+  <div class="t-bq-wrapper t-bq-wrapper-boxed">
+      <div class="t-bq-quote t-bq-quote-paul">
+          <div class="t-bq-quote-paul-userpic"></div>
+          
+          <div class="t-bq-quote-paul-pattern">
+          </div>
+          <div class="t-bq-quote-paul-base">
+              <blockquote class="t-bq-quote-paul-text" cite="Strugatsky Brothers">
+                Their comprehensive approach to intellectual property management truly sets them apart. Whether it's trademark registration, patent filing, or copyright protection, UNIKO IPR Services handles every aspect with precision and efficiency. They guided me through the entire process, ensuring that my intellectual property assets were fully protected.
+              </blockquote>
+              <div class="t-bq-quote-paul-meta">
+                  <div class="t-bq-quote-paul-meta-info">
+                      <div class="t-bq-quote-paul-author"><cite>Ankesh Damahe</cite></div>
+                      
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="t-bq-section" id="paul">
+  <div class="t-bq-wrapper t-bq-wrapper-boxed">
+      <div class="t-bq-quote t-bq-quote-paul">
+          <div class="t-bq-quote-paul-userpic"></div>
+          
+          <div class="t-bq-quote-paul-pattern">
+          </div>
+          <div class="t-bq-quote-paul-base">
+              <blockquote class="t-bq-quote-paul-text" cite="Strugatsky Brothers">
+                What I appreciate most about UNIKO IPR Services is their commitment to delivering results. They go above and beyond to understand their clients' needs and provide tailored solutions that exceed expectations. Their team of experts is always available to answer questions and provide expert advice, making the entire experience seamless and stress-free.
+              </blockquote>
+              <div class="t-bq-quote-paul-meta">
+                  <div class="t-bq-quote-paul-meta-info">
+                      <div class="t-bq-quote-paul-author"><cite>Praduman Kathade</cite></div>
+                     
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+</div>
+<% if(req.isAuthenticated()) {%>
+<div id="contactus">
+  <div id="con1">
+   <h2>Lets Connect</h2>
+  <form action="/contact" method="post" class="contactform">
+    <input type="text" name="name" placeholder="Your Name"  required  value=<%= user.name %>>
+    <input type="email" name="email" placeholder="Your Email" required value=<%= user.email %> >
+    <input type="tel" name="Mobile" placeholder="Mobile number" required>
+    <textarea name="message" id="message" cols="60" style="width: 90%;" rows="10" placeholder="Message" required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+ </div>
+ <%} else{ %>
+  <div id="contactus">
+    <div id="con1">
+     <h2>Lets Connect</h2>
+    <form action="/contact" method="post" class="contactform">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="Mobile" placeholder="Mobile number" required>
+      <textarea name="message" id="message" cols="60" style="width: 90%;" rows="10" placeholder="Message" required></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+   </div>
+   <% } %>
+
+
+ <div id="con2">
+  <h1>Contact Us</h1>
+  <h4>If you aspire to safeguard your unique invention, research in accordance with proper rules and regulation, then it’s time to communicate with us</h4>
+  <h5>Contact Details:-</h5>
+  <div class="loc"><i class="ri-map-pin-line"></i><h4>Near Shiv Mandir, Shanti Nagar,<br> Khat Road, Bhandara (441904)<br> Maharashtra</h4></div>
+  <div class="loc1"><i class="ri-smartphone-line"></i><h6 class="phone">+91 9876543210</h6></div>
+  <div class="loc1"><i class="ri-mail-line"></i><h6 class="phone">unikoip@outlook.com</h6></div>
+  <div class="loc1"><i class="ri-global-line"></i><h6 class="phone">www.unikoip.com</h6></div>
+ </div>
+</div>
+
+
+
+  </div>
+  
+
+  <script>        // profile panel
+    const menu = document.getElementById("profileMenu");
+    const menuBtn =  document.querySelector(".profileIcon");
+
+    menuBtn.addEventListener("click",function(){
+        menu.classList.toggle("show");
+        setTimeout(() => {
+            menu.style.overflow = "visible";
+        }, 300);
+        menu.style.overflow = "hidden";
+    })
+    
+    document.addEventListener("click",function(e){
+        if(e.target !== menuBtn && !menu.contains(e.target)){
+            menu.classList.remove("show");
+        }
+    })
+    // profile panel
+
+    // hambargar
+    const hmb = document.querySelector(".hambargar");
+    const navul = document.querySelector(".hero nav ul");
+
+    var x = window.matchMedia("(max-width: 700px)");
+
+    x.addEventListener("change", function() {
+        navul.classList.remove("show");
+        menu.classList.remove("show");
+        hmb.classList.remove("active");
+    });
+    hmb.addEventListener("click",function(){
+        navul.classList.toggle("show");
+        hmb.classList.toggle("active");
+    })
+
+    document.addEventListener("click",function(e){
+        if(e.target !== hmb && !navul.contains(e.target)){
+            navul.classList.remove("show");
+            hmb.classList.remove("active");
+        }
+    })
+    const slider = document.querySelector(".slider");
+
+function activate(e) {
+  const items = document.querySelectorAll(".item");
+  e.target.matches(".next") && slider.append(items[0]);
+  e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+}
+
+document.addEventListener("click", activate, false);
+
+ 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+var odo1 = document.querySelector('.odo1')
+const odomerter=new Odometer({
+  el:odo1,
+})
+odomerter.update(20000)
+odo1.innertext="20000+"
+
+var odo2 = document.querySelector('.odo2')
+
+const odomerter2=new Odometer({
+  el:odo2,
+})
+
+odomerter2.update(200)
+
+var odo3=document.querySelector('.odo3')
+
+const odomerter3=new Odometer({
+  el:odo3,
+})
+
+odomerter3.update(700)
+
+
+</script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
