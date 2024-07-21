@@ -6,14 +6,14 @@ const passport = require('passport')
 const passportlocal=require('passport-local')
 const nodemail=require("nodemailer")
 
-const { body, validationResult } = require('express-validator');
 
 
 passport.use(new passportlocal(usermodel.authenticate()))
 
 router.get('/login', function(req, res) {
   const flashmessage =req.flash("message")
-  res.render('login',{flashmessage})
+  const error = req.flash("error")
+  res.render('login',{flashmessage,error})
 });
 
 
@@ -126,6 +126,24 @@ router.post('/login', passport.authenticate("local",{
   failureFlash:true,
 }),function(req, res) {})
 
+
+router.post('/login', function(req, res, next) {
+  passport.authenticate('local', function(err, user, info) {
+    if (err) {
+      return next(err);
+    }
+    if (!user) {
+      req.flash('error', 'Incorrect email or password'); 
+      return res.redirect('/login');
+    }
+    req.logIn(user, function(err) {
+      if (err) {
+        return next(err);
+      }
+      return res.redirect('/');
+    });
+  })(req, res, next);
+});
 
 
 
