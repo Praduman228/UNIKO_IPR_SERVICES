@@ -57,7 +57,8 @@ router.post('/contact', async function(req, res) {
   };
   await transporter.sendMail(mailOptions);
   await transporter.sendMail(mailOptions2);
-  res.redirect("/")}catch (err) {
+  res.redirect("/")}
+  catch (err) {
     res.redirect("/")
   }
 })
@@ -83,20 +84,24 @@ else{
   res.render('index',{req})
 }
 });
-router.get('/profile', async function(req, res) {
+router.get('/profile', isAuthenticated ,async function(req, res) {
   var user= await usermodel.findOne({username:req.session.passport.user})
   res.render('profile',{user});
+});
+router.post('/profile', async function(req, res) {
+  await usermodel.updateMany({username:req.body.username,name:req.body.name,email:req.body.email})
+  res.redirect("/profile")
 });
 router.get('/logout', function(req, res, next){
   req.logout(function(err) {
     if (err) { return next(err); }
-    res.redirect('/');
+    res.redirect('/login');
   });
 })
 
 router.post('/register', async function(req, res) {
 try{
-  const user= await usermodel.findOne({email:req.body.email});
+  const user= await usermodel.findOne({username:req.body.username});
   if (user) {
     req.flash("message","User already registered")
     res.redirect("/login")
@@ -146,6 +151,13 @@ router.post('/login', function(req, res, next) {
 });
 
 
+function isAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  req.flash('error', 'You must be logged in');
+  res.redirect('/login');
+}
 
 
 module.exports = router;
