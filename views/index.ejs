@@ -393,39 +393,48 @@
 
     // hambargar
     const hmb = document.querySelector(".hambargar");
-    const navul = document.querySelector(".hero nav ul");
+const navul = document.querySelector(".hero nav ul");
 
-    var x = window.matchMedia("(max-width: 700px)");
+var x = window.matchMedia("(max-width: 700px)");
 
-    x.addEventListener("change", function() {
+x.addEventListener("change", function() {
+    navul.classList.remove("show");
+    hmb.classList.remove("active");
+});
+
+hmb.addEventListener("click", function() {
+    navul.classList.toggle("show");
+    hmb.classList.toggle("active");
+});
+
+document.addEventListener("click", function(e) {
+    if (e.target !== hmb && !navul.contains(e.target)) {
         navul.classList.remove("show");
-        menu.classList.remove("show");
+        hmb.classList.remove("active");
+    }
+});
+
+const navItems = document.querySelectorAll(".hero nav ul li a");
+
+navItems.forEach(item => {
+    item.addEventListener("click", function() {
+        navul.classList.remove("show");
         hmb.classList.remove("active");
     });
-    hmb.addEventListener("click",function(){
-        navul.classList.toggle("show");
-        hmb.classList.toggle("active");
-    })
+});
 
-    document.addEventListener("click",function(e){
-        if(e.target !== hmb && !navul.contains(e.target)){
-            navul.classList.remove("show");
-            hmb.classList.remove("active");
-        }
-    })
-    const slider = document.querySelector(".slider");
+const slider = document.querySelector(".slider");
 
 function activate(e) {
-  const items = document.querySelectorAll(".item");
-  e.target.matches(".next") && slider.append(items[0]);
-  e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+    const items = document.querySelectorAll(".item");
+    e.target.matches(".next") && slider.append(items[0]);
+    e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
 }
 
 document.addEventListener("click", activate, false);
 
- 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -433,29 +442,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-var odo1 = document.querySelector('.odo1')
-const odomerter=new Odometer({
-  el:odo1,
-})
-odomerter.update(20000)
-odo1.innertext="20000+"
-
-var odo2 = document.querySelector('.odo2')
-
-const odomerter2=new Odometer({
-  el:odo2,
-})
-
-odomerter2.update(200)
-
-var odo3=document.querySelector('.odo3')
-
-const odomerter3=new Odometer({
-  el:odo3,
-})
-
-odomerter3.update(700)
 
 
 </script>

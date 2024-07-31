@@ -867,12 +867,13 @@
     #service p {
       font-size: 16px;
       line-height: 25px;
-      text-align: left;
+      text-align: justify;
       font-weight: 500;
       color: #0f0f0f;
       color: rgba(15, 15, 15, 0.6);
       font-family: 'Mukta', sans-serif;
       word-spacing: 3px;
+      letter-spacing: -1px;
     }
     
     
@@ -1476,3 +1477,13 @@
       }
     }
     
+    ol{
+      font-size: 16px;
+      line-height: 25px;
+      text-align: justify;
+      font-weight: 500;
+      color: #0f0f0f;
+      color: rgba(15, 15, 15, 0.6);
+      font-family: 'Mukta', sans-serif;
+      word-spacing: 3px;
+    }

@@ -624,9 +624,14 @@ body{
 }
 
 
-#left{width: 100%;}
+#left{width: 100%;
+display: flex;
+justify-content: center;}
 
 #right{width: 100%;}
+#right h4
+{padding-left: 22px;
+letter-spacing: -1px;}
 
 #left img{
     height: 300px;
@@ -635,6 +640,14 @@ body{
     border: 2px solid #97dcc4;
 }
 
+@media screen and (max-width: 1024px) {
+  #left img{
+    height: 300px;
+    width: 350px;
+    border-radius: 18px;
+    border: 2px solid #97dcc4;
+}
+}
 }
 
 
@@ -995,6 +1008,18 @@ section.t-bq-section {
   width: 200px;
   height: 300px;
 }
+
+@media screen and (max-width: 768px) {
+  #myteam h2{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 200;
+    text-align: center;
+    border-bottom: 2px solid white;
+  
+  }
+}
+
 
 #contactus{
   background-color: white;
