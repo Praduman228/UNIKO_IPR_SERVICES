@@ -57,9 +57,10 @@ router.post('/contact', async function(req, res) {
   };
   await transporter.sendMail(mailOptions);
   await transporter.sendMail(mailOptions2);
-  res.redirect("/")}
+  req.flash('success',"Submited Successfully")
+  res.redirect("/#contactus")}
   catch (err) {
-    res.redirect("/")
+    res.redirect("/#contactus")
   }
 })
 
@@ -76,21 +77,37 @@ router.get('/services', async function(req, res) {
 
 
 router.get('/' , async function(req, res) {
+  const success=req.flash("success")
 if (req.isAuthenticated()) {
   var user= await usermodel.findOne({username:req.session.passport.user})
-  res.render('index',{user,req});
+  res.render('index',{user,req,success});
 }
 else{
-  res.render('index',{req})
+  res.render('index',{req,success})
 }
 });
 router.get('/profile', isAuthenticated ,async function(req, res) {
+  const success=req.flash("success")
   var user= await usermodel.findOne({username:req.session.passport.user})
-  res.render('profile',{user});
+  res.render('profile',{user,success});
 });
 router.post('/profile', async function(req, res) {
-  await usermodel.updateMany({username:req.body.username,name:req.body.name,email:req.body.email})
-  res.redirect("/profile")
+  try {
+    const filter = { username: req.body.username }; // Find user by username
+    const update = { name: req.body.name, email: req.body.email }; // Update name and email
+
+    const updatedUser = await usermodel.findOneAndUpdate(filter, update, { new: true });
+
+    if (updatedUser) {
+      req.flash('success', 'Profile updated successfully');
+      res.redirect('/profile');
+    } else {
+      res.status(404).send('Something went wrong');
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Something went wrong");
+  }
 });
 router.get('/logout', function(req, res, next){
   req.logout(function(err) {

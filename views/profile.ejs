@@ -134,7 +134,6 @@
             <img src="https://www.happierhuman.com/wp-content/uploads/2019/07/joking-man.jpg?ezimgfmt=rs:400x426/rscb1" alt="Profile Picture">
         </div>
         <h1>Hello! <%=user.name%> </h1>
-        <h1>User Profile</h1>
         <form id="profile-form" action="/profile" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -153,6 +152,9 @@
             </div>
         </form>
         <a href="/" class="back-button">Back to Home</a>
+        <%if(success){%>
+            <h4 style="color: green;" ><%=success%></h4>
+            <% }%>
     </div>
 </body>
 </html>

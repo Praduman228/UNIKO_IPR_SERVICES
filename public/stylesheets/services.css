@@ -1,169 +1,178 @@
  
-    body {
+   
+  *{
+    
+      box-sizing: border-box;
+      font-family: 'Poppins',sans-serif;
+      
+  }
+  body,html{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Poppins',sans-serif;
       width: 100%;
       overflow-x: hidden;
       color: #555;
       background-color: #EEEE;
-    }
-
-    .hero {
-        width: 100%;
+  }
+  #navbar{
+    width: 100%;
+}
+  .hero {
+      width: 100%;
+      position: fixed;
+      z-index: 10;
       
-    }
-    .hero nav {
-        color:white;
-        background-color: white;
-        width: 100%;
-        padding:1% 5%;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        min-height:5vh;
-        transition: all .6s ease;
-    }
-
-    .hero nav .logo img{
-       
+    
+  }
+  .hero nav {
+      color:white;
+      background-color: white;
+      width: 100%;
+      padding:1% 4%;
+      display: flex;
+      justify-content: space-between;
+      position:relative;
+      min-height:5vh;
+      transition: all .6s ease;
+  }
+  .hero nav .logo img{
+     
       width: 120px;
       height: 55px;
       border-radius: 18px;
   }
-       
+  .hero nav ul {
+      list-style-type: none;
+  }
+  .hero nav ul li{
+      display: inline-block;
+      margin-right: 10px;
+      height: 100%;
     
-    .hero nav ul {
-        list-style-type: none;
-    }
-    .hero nav ul li{
-        display: inline-block;
-        margin-right: 10px;
-        height: 100%;
-      
-    }
-    .hero nav ul li a {
-        padding:15px;
-        display: inline-block;
-        height: 100%;
-        text-decoration: none;
-        color:black;
-        border-radius: 18px;
-    }
-    .hero nav ul li a:hover {
-        background-color: #97dcc4;
-    }
-    
-    .hero nav ul i.fa-user:first-of-type{
-        font-size: 130%;
-        margin-left:10px;
-        padding:10px;
-        border-radius: 50%;
-        color: black;
-        background-color: white;
-        text-align: center;
-        transition: all .3s ease;
-    }
-    .hero nav ul i.fa-user:first-of-type:hover {
-        background-color: grey;
-        color:white;
-    }
-    .hero nav .sub-menu-wrap{
-        position: absolute;
-        top:100%;
-        right: 5%;
-        min-width: 250px;
-        background-color: #e6e6e6;
-        color:#525252;
-        font-weight: 300;
-        z-index: 3;
-        max-height:0;
-        overflow: hidden;
-        transition: opacity .1s ease,max-height .3s ease-in;
-        opacity:0;
-    }
-    .hero nav .sub-menu-wrap:before{
-        content:'';
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        background-color: inherit;
-        top:-5px;
-        transform: rotate(45deg);
-        right:15px;
-        z-index: 5;
-    }
-    .hero nav .sub-menu-wrap img{
-        object-fit: cover;
-        width:80px;
-        height: 80px;
-        border-radius: 50%;
-    }
-    
-    .hero nav .sub-menu {
-        padding:15px;
-    }
-    .hero nav .sub-menu-wrap hr{
-        border:0;
-        margin:20px;
-        background:#a1a1a1;
-        padding:1px;
-    }
-    .hero nav .sub-menu-wrap~.show {
-        max-height: 800px;
-        opacity:1;
-    }
-    .hero nav ul.show {
-        max-height:800px;
-        padding:15px 0;
-        opacity:1;
-    }
-    .user-info {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-       
-        margin: 10px 0;
-    }
-    .menu-link {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    .menu-link a i{
-        margin:0 5px;
-        background-color:#a1a1a1;
-        color:white;
-        border-radius: 50%;
-        text-align: center;
-        padding:10px;
-    }
-    .menu-link a{
-        padding:5px 10px;
-        width: 100%;
-        display: flex;
-        gap:5px;
-        align-items: center; 
-        text-decoration: none;
-        color:grey;
-        border-radius: 25px;       
-    }
-    .menu-link a:hover {
-        background-color:#DBD3CD;
-    }
-    .menu-link span {
-        float: right;
-    }
-    .menu-link h4 {
-        width: 100%;
-    }
-    .hambargar {
-        display: none;
-    }
-    
-    @media only screen and (max-width : 1000px){
+  }
+  .hero nav ul li a {
+      padding:15px;
+      display: inline-block;
+      height: 100%;
+      text-decoration: none;
+      color:black;
+      border-radius: 18px;
+  }
+  .hero nav ul li a:hover {
+      background-color: #97dcc4;
+  }
+  
+  .hero nav ul i.fa-user:first-of-type{
+      font-size: 130%;
+      margin-left:10px;
+      padding:10px;
+      border-radius: 50%;
+      color: black;
+      background-color: white;
+      text-align: center;
+      transition: all .3s ease;
+  }
+  .hero nav ul i.fa-user:first-of-type:hover {
+      background-color: black !important;;
+      color:white;
+  }
+  .hero nav .sub-menu-wrap{
+      position: absolute;
+      top:100%;
+      right: 5%;
+      min-width: 250px;
+      background-color: #e6e6e6;
+      color:#525252;
+      font-weight: 300;
+      z-index: 3;
+      max-height:0;
+      overflow: hidden;
+      transition: opacity .1s ease,max-height .3s ease-in;
+      opacity:0;
+  }
+  .hero nav .sub-menu-wrap:before{
+      content:'';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: inherit;
+      top:-5px;
+      transform: rotate(45deg);
+      right:15px;
+      z-index: 5;
+  }
+  .hero nav .sub-menu-wrap img{
+      object-fit: cover;
+      width:80px;
+      height: 80px;
+      border-radius: 50%;
+  }
+  
+  .hero nav .sub-menu {
+      padding:15px;
+  }
+  .hero nav .sub-menu-wrap hr{
+      border:0;
+      margin:20px;
+      background:#a1a1a1;
+      padding:1px;
+  }
+  .hero nav .sub-menu-wrap.show {
+      max-height: 800px;
+      opacity:1;
+  }
+  .hero nav ul.show {
+      max-height:800px;
+      padding:15px 0;
+      opacity:1;
+  }
+  .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+     
+      margin: 10px 0;
+  }
+  .menu-link {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      align-items: center;
+  }
+  .menu-link a i{
+      margin:0 5px;
+      background-color:#a1a1a1;
+      color:white;
+      border-radius: 50%;
+      text-align: center;
+      padding:10px;
+  }
+  .menu-link a{
+      padding:5px 10px;
+      width: 100%;
+      display: flex;
+      gap:5px;
+      align-items: center; 
+      text-decoration: none;
+      color:grey;
+      border-radius: 25px;       
+  }
+  .menu-link a:hover {
+      background-color:#DBD3CD;
+  }
+  .menu-link span {
+      float: right;
+  }
+  .menu-link h4 {
+      width: 100%;
+  }
+  .hambargar {
+      display: none;
+  }
+  
+  @media only screen and (max-width : 1000px){
       html{
         scroll-behavior: smooth;
         overflow-x: hidden;
@@ -791,6 +800,7 @@
      *-------------------------------------------------- */
     #service {
       background-color: #eee;
+      padding-top: 5%;
     }
     
     #service .tab-content {

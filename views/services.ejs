@@ -44,10 +44,10 @@
           </div>
         </div>
         <ul>
-          <li><a href="/" style="font-weight: bolder;">Home</a></li>
-          <li><a href="/services" style="background-color: #97dcc4; font-weight: bolder;">Services</a></li>
-          <li><a href="/#aboutus" style="font-weight: bolder;">About Us</a></li>
-          <li><a href="/#contactus"style="font-weight: bolder;">Contact Us</a></li>
+          <li><a href="/" style="font-weight: 500;">Home</a></li>
+          <li><a href="/services" style="background-color: #97dcc4; font-weight: 500;">Services</a></li>
+          <li><a href="/#aboutus" style="font-weight: 500;">About Us</a></li>
+          <li><a href="/#contactus"style="font-weight: 500;">Contact Us</a></li>
           <i class="fa-solid fa-user profileIcon"></i>
         </ul>
         <div class="sub-menu-wrap" id="profileMenu">
@@ -59,7 +59,7 @@
               </div>
             <hr>
             <div class="menu-link">
-              <a href="#"><i class="fa-solid fa-user"></i>
+              <a href="/profile"><i class="fa-solid fa-user"></i>
                 <h4> Edit Profile <span>&gt;</span></h4>
               </a>
               <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i>
@@ -219,22 +219,9 @@ It is necessary that the product obtains its qualities and reputation from that 
 
 
 <script>
-    angular.module('formApp', [])
-        .controller('formController', ['$scope', function($scope) {
-          	$scope.master = {};
-
-          	$scope.update = function(user) {
-            	$scope.master = angular.copy(user);
-          	};
-
-          	$scope.reset = function() {
-            	$scope.user = angular.copy($scope.master);
-          	};
-
-          	$scope.reset();
-    }]);
-
-    const menu = document.getElementById("profileMenu");
+  
+  
+  const menu = document.getElementById("profileMenu");
     const menuBtn =  document.querySelector(".profileIcon");
 
     menuBtn.addEventListener("click",function(){
@@ -250,6 +237,21 @@ It is necessary that the product obtains its qualities and reputation from that 
             menu.classList.remove("show");
         }
     })
+
+    angular.module('formApp', [])
+        .controller('formController', ['$scope', function($scope) {
+          	$scope.master = {};
+
+          	$scope.update = function(user) {
+            	$scope.master = angular.copy(user);
+          	};
+
+          	$scope.reset = function() {
+            	$scope.user = angular.copy($scope.master);
+          	};
+
+          	$scope.reset();
+    }]);
     // profile panel
 
     // hambargar

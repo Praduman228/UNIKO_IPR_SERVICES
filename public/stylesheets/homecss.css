@@ -617,7 +617,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-right: 2%;
+  padding-right: 4%;
 }
 body{
   overflow-x: hidden;
